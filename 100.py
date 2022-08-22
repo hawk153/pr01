@@ -31,3 +31,15 @@ def ask():
         if not (x.isdigit()) or not (y.isdigit()):
             print(" Введите числа! ")
             continue
+
+        x, y = int(x), int(y)
+
+        if 0 > x or x > 2 or 0 > y or y > 2:
+            print(" Координаты вне диапазона! ")
+            continue
+
+        if field[x][y] != " ":
+            print(" Клетка занята! ")
+            continue
+
+        return x, y
